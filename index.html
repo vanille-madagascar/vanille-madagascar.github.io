@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+#myBtn {
+  width: 300px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+* {
+    box-sizing: border-box;
+  }  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  } 
+  th, td {
+    text-align: left;
+    padding: 16px;
+  } 
+  tr:nth-child(even) {
+    background-color: #2d2c2c;
+  }  
+</style>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="paysage.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div class="content">
+  <img src="logo.png" alt="logo" width="100" height="100" >
+  <h1>La vanille de Madagascar</h1>
+  <p>Venez decouvrir notre gamme de  vanille Originaire de Madagascar plus précisément  de Sambava à un  prix très abordable.Idéal pour parfumer vos plats, votre thé ou pour le plaisir d'offrir.</p>
+  <div class="row">
+    <div class="column">
+      <img src="bun4.jpg" alt="Snow" style="width:55%">
+    </div>  
+    <div class="column">
+      <img src="bun2.jpg" alt="Forest" style="width:55%">
+    </div>
+    <div class="column">
+      <img src="bun3.jpg" alt="Mountains" style="width:55%">
+    </div>  
+  </div>
+  <h1>Tarifs</h1>
+  <p>Nous livrons dans toute la France et outre mer avec Colissimo ( A partir de 4.95£ )</p>
+  <table>
+    <tr>
+      <th>POIDS</th>
+      <th>PRIX</th>
+    </tr>
+    <tr>
+      <td>5 tiges</td>
+      <td>&euro; 10</td>
+    </tr>
+    <tr>
+      <td>250 g</td>
+      <td>&euro; 100</td>
+    </tr>
+    <tr>
+      <td>1 kg</td>
+      <td>&euro; 385</td>
+    </tr>
+  </table>
+  <br>
+  <h2 style="text-align: center;"><span style="color: #ffffff;"><strong><a style="color: #ffffff;" title="whatsapp" href="https://vanille-de-madagascar.callbell.shop/" target="_blank" rel="noopener">Passez votre commande sur whatsapp</a></strong></span></h2>
+</div>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+</body>
+</html>
